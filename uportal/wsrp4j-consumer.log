@@ -1,0 +1,27 @@
+2007-07-23 16:17:18,584 [org.jasig.portal.ChannelManager#65] INFO  org.apache.wsrp4j.log.LogManager: Logger.properties file: wsrp4j-logger.properties
+2007-07-23 16:17:18,584 [org.jasig.portal.ChannelManager#65] INFO  org.apache.wsrp4j.log.LogManager: Global log level: TRACE_HIGH
+2007-07-23 16:17:18,586 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.consumer.portlet.impl.ProxyPortlet: init - Entering method
+2007-07-23 16:17:18,790 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.consumer.portlet.impl.ProxyPortlet: initConsumerEnvironment - Path to persistent directory :/home/flexibus/uportal_tomcat/webapps/proxyportlet/WEB-INF
+2007-07-23 16:17:18,790 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.consumer.portlet.impl.ProxyPortlet: init - Exiting method.
+2007-07-23 16:17:18,791 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.consumer.portlet.impl.ProxyPortlet: render - Entering method
+2007-07-23 16:17:18,860 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.driver.PersistentAccess: getServerPersistentFactory - Entering method
+2007-07-23 16:17:18,860 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.driver.PersistentAccess: getFactory - Entering method
+2007-07-23 16:17:18,860 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.driver.PersistentAccess: loadPropertyFile - Entering method
+2007-07-23 16:17:18,864 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.driver.PersistentAccess: getFactory - Exiting method.
+2007-07-23 16:17:18,864 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.driver.PersistentAccess: getServerPersistentFactory - Exiting method.
+2007-07-23 16:17:18,864 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getPersistentHandler - Entering method
+2007-07-23 16:17:18,936 [org.jasig.portal.ChannelManager#65] DEBUG org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getPersistentHandler - PersistentHandler successfully created.
+2007-07-23 16:17:18,936 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getPersistentHandler - Exiting method.
+2007-07-23 16:17:18,936 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getProducerList - Entering method
+2007-07-23 16:17:19,019 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getServerPersistentInformationProvider - Entering method
+2007-07-23 16:17:19,078 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentInformationProviderImpl: Constructor - Entering method
+2007-07-23 16:17:19,079 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentInformationProviderImpl: Constructor - Exiting method.
+2007-07-23 16:17:19,079 [org.jasig.portal.ChannelManager#65] DEBUG org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getServerPersistentInformationProvider - ServerPersistentInformationProvider successfully created.
+2007-07-23 16:17:19,079 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getServerPersistentInformationProvider - Exiting method.
+2007-07-23 16:17:19,079 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentInformationProviderImpl: getPersistentInformation - Entering method
+2007-07-23 16:17:19,127 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentInformationProviderImpl: getPersistentInformation - Exiting method.
+2007-07-23 16:17:19,127 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.ServerPersistentFactoryImpl: getProducerList - Exiting method.
+2007-07-23 16:17:19,127 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.PersistentHandlerImpl: restoreMultiple - Entering method
+2007-07-23 16:17:21,596 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.persistence.xml.driver.PersistentHandlerImpl: store - Entering method
+2007-07-23 16:17:21,597 [org.jasig.portal.ChannelManager#65] DEBUG org.apache.wsrp4j.persistence.xml.driver.PersistentHandlerImpl: store - Filename for store = /home/flexibus/uportal_tomcat/webapps/proxyportlet/WEB-INF/persistence/producers/org.apache.wsrp4j.consumer.driver.ProducerImpl@20469830.xmlwith code = 20469830
+2007-07-23 16:17:21,598 [org.jasig.portal.ChannelManager#65] ALL   org.apache.wsrp4j.consumer.portlet.impl.ProxyPortlet: render - Exiting method.
