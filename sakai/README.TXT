@@ -1,9 +1,10 @@
 The Scripts
 -----------
 
-reset_fluid_sakai_db.sh
+stop_deploy_resetdb_start.sh
 - stops sakai and tomcat if running
 - restores the database to a clean state with the Gallery tool included.
+- redeploy everything
 - restarts sakai
 - invoked by nightly cron job
 
