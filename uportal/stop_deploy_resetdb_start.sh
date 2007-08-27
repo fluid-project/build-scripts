@@ -39,12 +39,12 @@ mvn clean install
 check_errs $?  "portlet failed to rebuild and redeploy."
 
 cd gallery-portlet
-mvn -Dappserver.id=tomcat5x -Dappserver.home=$CATALINA_HOME cargo:deploy
+mvn -Dappserver.id=tomcat5x -Dappserver.home=$UPORTAL_TOMCAT cargo:deploy
 check_errs $?  "portlet failed to rebuild and redeploy."
 
 # redeploy the portlet
 cd $UPORTAL_HOME
-ant deployPortletApp -DportletApp=$UPORTAL_TOMCAT/webapps/ImageGallery-Portlet.war
+ant deployPortletApp -DportletApp=$UPORTAL_TOMCAT/webapps/gallery-portlet-0.1.war
 
 
 # restart tomcat
