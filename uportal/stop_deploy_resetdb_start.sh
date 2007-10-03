@@ -38,14 +38,15 @@ cd $CONTINUUM_PORTLET_PROJECT
 mvn clean install
 check_errs $?  "portlet failed to rebuild and redeploy."
 
-cd gallery-portlet
-mvn -Dappserver.id=tomcat5x -Dappserver.home=$UPORTAL_TOMCAT cargo:deploy
-check_errs $?  "portlet failed to rebuild and redeploy."
-
 # redeploy the portlet
+# copy the war file to an unversioned filename first, since apache needs
+# to map the path to right worker in httpd.conf, and we don't want
+# to have to restart apache for every new version
+# (see FLUID-41)
+cd $CONTINUUM_PORTLET_PROJECT/gallery-portlet/target/
+cp gallery-portlet-0.1.war gallery-portlet.war
 cd $UPORTAL_HOME
-ant deployPortletApp -DportletApp=$UPORTAL_TOMCAT/webapps/gallery-portlet-0.1.war
-
+ant deployPortletApp -DportletApp=$CONTINUUM_PORTLET_PROJECT/gallery-portlet/target/gallery-portlet.war
 
 # restart tomcat
 /home/flexibus/scripts/uportal/uportal_start_tomcat.sh 
