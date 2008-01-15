@@ -18,8 +18,10 @@ check_errs $?  "error stopping tomcat."
 
 # rebuild and redeploy the fluid components and gallery tool
 cd $CONTINUUM_GALLERY_PROJECT
-mvn -Dmaven.tomcat.home=$CATALINA_HOME -Dmaven.test.skip clean install sakai:deploy
-check_errs $?  "error rebuilding and redeploying."
+mvn -Dmaven.test.skip clean install
+check_errs $?  "error rebuilding"
+mvn -Dmaven.tomcat.home=$CATALINA_HOME -Dmaven.test.skip sakai:deploy
+check_errs $?  "error redeploying."
 
 # reset the database to known state
 mysql -u fluid_db_user sakai_fluid_db < /home/flexibus/scripts/sakai/fluid_sakai_backup.sql
