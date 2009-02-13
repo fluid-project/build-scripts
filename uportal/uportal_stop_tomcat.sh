@@ -1,5 +1,4 @@
 #!/bin/bash
-
 source /home/flexibus/scripts/uportal/uportal_tomcat_env.sh
 
 catalina_pid=`cat $CATALINA_PID`
