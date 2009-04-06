@@ -18,7 +18,14 @@ source /home/flexibus/scripts/uploader-server/uploader-server-env.sh
 rm ./uploader-jetty.log
 
 # Delete the exploded fluid-components war.
-rm -rf $UPLOADER_SERVER_HOME/image-gallery/web/src/main/webapp/fluid-components
+cd $UPLOADER_SERVER_HOME/image-gallery/web/src/main/webapp
+rm -rf components
+rm -rf framework
+rm -rf integration-demos
+rm -rf lib
+rm -rf sample-code
+rm -rf standalone-demos
+rm -rf tests
 
 # Rebuild.
 cd $UPLOADER_SERVER_HOME 
