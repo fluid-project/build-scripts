@@ -22,7 +22,6 @@ check_errs $?  "error restarting hsql."
 # update uportal to the trunk
 echo "Step 3: update uportal to the trunk"
 /home/flexibus/scripts/uportal/uportal_update_to_trunk.sh
-check_errs $?  "error update uportal to trunk."
 
 # restart tomcat
 echo "Step 5: restart tomcat"
