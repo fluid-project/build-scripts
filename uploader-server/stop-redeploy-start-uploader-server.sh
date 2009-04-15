@@ -15,7 +15,7 @@ source /home/flexibus/scripts/uploader-server/uploader-server-env.sh
 /home/flexibus/scripts/uploader-server/stop-uploader-server.sh
 
 # Delete the old log.
-rm ./uploader-jetty.log
+rm /home/flexibus/scripts/uploader-server/uploader-jetty.log
 
 # Delete the exploded fluid-components war.
 cd $UPLOADER_SERVER_HOME/image-gallery/web/src/main/webapp
