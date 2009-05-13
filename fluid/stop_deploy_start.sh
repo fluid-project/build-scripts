@@ -18,10 +18,12 @@ check_errs $?  "error stopping tomcat."
 
 # rebuild and redeploy the fluid components 
 cd $CONTINUUM_GALLERY_PROJECT/build-scripts
-ant fullWar
+ant dailyBuild
 check_errs $?  "error rebuilding"
-cp $CONTINUUM_GALLERY_PROJECT/products/dist/fluid-components*.war $CATALINA_HOME/webapps/fluid.war
-rm -rf $CATALINA_HOME/webapps/fluid
+
+# copy the war fiel to tomcat and remove the old code
+cp $CONTINUUM_GALLERY_PROJECT/products/dist/fluid-components*.war $CATALINA_HOME/webapps/infusion.war
+rm -rf $CATALINA_HOME/webapps/infusion
 check_errs $?  "error redeploying."
 
 # restart tomcat
