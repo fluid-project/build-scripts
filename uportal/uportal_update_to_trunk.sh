@@ -5,5 +5,5 @@ cd $UPORTAL_HOME
 echo `pwd`
 svn update
 check_errs $?  "error doing svn update on uportal trunk."
-ant deploy-ear
+ant clean initportal
 check_errs $?  "error doing ant deploy-ear."
