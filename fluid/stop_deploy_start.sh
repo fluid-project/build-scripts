@@ -22,7 +22,7 @@ ant dailyBuild
 check_errs $?  "error rebuilding"
 
 # copy the war fiel to tomcat and remove the old code
-cp $CONTINUUM_GALLERY_PROJECT/products/dist/fluid-components*.war $CATALINA_HOME/webapps/infusion.war
+cp $CONTINUUM_GALLERY_PROJECT/products/src-dist/fluid-components*.war $CATALINA_HOME/webapps/infusion.war
 rm -rf $CATALINA_HOME/webapps/infusion
 check_errs $?  "error redeploying."
 
