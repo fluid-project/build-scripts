@@ -1,4 +1,5 @@
 #!/bin/bash
+source /home/flexibus/scripts/fluid/fluid_tomcat_env.sh
 CONTINUUM_ENGAGE_PROJECT=/home/flexibus/continuum/working/56
 
 # check errors also exists in stop_deploy_start.sh and should be refactored
