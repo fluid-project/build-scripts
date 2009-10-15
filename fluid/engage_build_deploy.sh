@@ -19,8 +19,8 @@ ant
 check_errs $? "ant build failed"
 
 # copy the war file to tomcat and remove the old code
-cp $CONTINUUM_ENGAGE_PROJECT/kettle/build/war/target/*.war $CATALINA_HOME/webapps/engage.war
-check_errs $? "copy WAR failed"
-
 rm -rf $CATALINA_HOME/webapps/engage
+
+cp $CONTINUUM_ENGAGE_PROJECT/kettle/products/*src.war $CATALINA_HOME/webapps/engage.war
+check_errs $? "copy WAR failed"
 
