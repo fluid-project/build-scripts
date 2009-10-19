@@ -10,7 +10,7 @@ check_errs  $?  "error removing old webapp and creating new folder"
 
 # get fluid_all and put the contents in the root of the incubator
 svn co http://source.fluidproject.org/svn/fluid/fluid-all
-mv $INCUBATOR_WORKING_COPY/fluid-all/* $INCUBATOR_WORKING_COPY
+cp -rf $INCUBATOR_WORKING_COPY/fluid-all/* $INCUBATOR_WORKING_COPY
 check_errs  $?  "error moving fluid-all/* to working copy folder"
 
 rm -rf $INCUBATOR_WORKING_COPY/fluid-all 
