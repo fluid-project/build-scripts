@@ -28,15 +28,7 @@ rm -rf standalone-demos
 rm -rf tests
 
 # Rebuild.
-cd $UPLOADER_SERVER_HOME/master
-mvn clean install
-check_errs $?  "error building the sakai master plugin."
-
-cd $UPLOADER_SERVER_HOME/fluid-components
-mvn clean install
-check_errs $?  "error building Fluid Infusion."
-
-cd $UPLOADER_SERVER_HOME/image-gallery
+cd $UPLOADER_SERVER_HOME
 mvn clean install sakai:deploy -Dmaven.tomcat.home=$UPLOADER_SERVER_HOME
 check_errs $?  "error building and deploying the app."
 
