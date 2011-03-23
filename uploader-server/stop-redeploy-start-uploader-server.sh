@@ -10,15 +10,15 @@ check_errs()
   fi
 }
 
-source /home/flexibus/scripts/uploader-server/uploader-server-env.sh
+source /home/continuum/scripts/uploader-server/uploader-server-env.sh
 
-/home/flexibus/scripts/uploader-server/stop-uploader-server.sh
+$UPLOADER_SERVER_SCRIPTS/stop-uploader-server.sh
 
 # Delete the old log.
-rm /home/flexibus/scripts/uploader-server/uploader-jetty.log
+rm $UPLOADER_SERVER_SCRIPTS/uploader-jetty.log
 
 # Delete the exploded fluid-components war.
-cd $UPLOADER_SERVER_HOME/image-gallery/web/src/main/webapp
+cd $UPLOADER_SERVER_HOME/web/src/main/webapp
 rm -rf components
 rm -rf framework
 rm -rf integration-demos
@@ -29,11 +29,18 @@ rm -rf tests
 
 # Rebuild.
 cd $UPLOADER_SERVER_HOME
-mvn clean install sakai:deploy -Dmaven.tomcat.home=$UPLOADER_SERVER_HOME
+
+#rm -rf sakai-master
+#git clone https://github.com/fluid-project/sakai-master.git sakai-master
+#cd sakai-master
+git clone https://github.com/fluid-project/image-gallery2.git image-gallery
+git clone https://github.com/fluid-project/infusion.git fluid-components
+
+mvn clean install sakai:deploy -Dmaven.tomcat.home=$UPLOADER_TOMCAT_HOME
 check_errs $?  "error building and deploying the app."
 
 # Start.
 cd $UPLOADER_SERVER_SCRIPTS
-/home/flexibus/scripts/uploader-server/start-uploader-server.sh  >& ./uploader-jetty.log 
+./start-uploader-server.sh  >& ./uploader-jetty.log 
 check_errs $?  "error restarting jetty."
 
